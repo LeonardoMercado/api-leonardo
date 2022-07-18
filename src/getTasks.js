@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk");
 
-const getTask = async (event) => {
+const getTasks = async (event) => {
   const dynamodb = new AWS.DynamoDB.DocumentClient();
 
   const result = await dynamodb.scan({
@@ -18,5 +18,5 @@ const getTask = async (event) => {
 };
 
 module.exports = {
-  getTask,
+  getTasks,
 };
